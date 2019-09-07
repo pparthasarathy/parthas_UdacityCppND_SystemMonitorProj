@@ -1,6 +1,6 @@
 # CppND-System-Monitor
 
-Starter code for System Monitor Project in the Object Oriented Programming Course of the [Udacity C++ Nanodegree Program](https://www.udacity.com/course/c-plus-plus-nanodegree--nd213). 
+pparthas Submission code for System Monitor Project in the Object Oriented Programming Course of the [Udacity C++ Nanodegree Program](https://www.udacity.com/course/c-plus-plus-nanodegree--nd213). 
 
 Follow along with the classroom lesson to complete the project!
 
@@ -27,15 +27,11 @@ This project uses [Make](https://www.gnu.org/software/make/). The Makefile has f
 
 ## Instructions
 
-1. Clone the project repository: `git clone https://github.com/udacity/CppND-System-Monitor-Project-Updated.git`
+1. Started project repository from Udacity CppND: `git clone https://github.com/udacity/CppND-System-Monitor-Project-Updated.git`
+
+2. Modified Solution from pparthas: `git clone https://github.com/pparthasarathy/parthas_UdacityCppND_SystemMonitorProj.git`
 
 2. Build the project: `make build`
 
 3. Run the resulting executable: `./build/monitor`
 ![Starting System Monitor](images/starting_monitor.png)
-
-4. Follow along with the lesson.
-
-5. Implement the `System`, `Process`, and `Processor` classes, as well as functions within the `LinuxParser` namespace.
-
-6. Submit!

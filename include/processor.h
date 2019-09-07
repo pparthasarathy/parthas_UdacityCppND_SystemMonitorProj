@@ -1,12 +1,22 @@
 #ifndef PROCESSOR_H
 #define PROCESSOR_H
 
+#define deltatime 1 // delta time in seconds over which to calculate current utilization
+
 class Processor {
  public:
-  float Utilization();  // TODO: See src/processor.cpp
-
-  // TODO: Declare any necessary private members
+    float Utilization();  // Done TODO: Returns the current CPU utilization over deltatime seconds
+    float OverallUtilization(); // Done TODO: Returns the aggregate CPU utilization
+  // Done TODO: Declare any necessary private members
  private:
+    long totalJiffies = 0;
+    long idleJiffies = 0;
+    long activeJiffies = 0;
+    float cpuUtilization = 0.0;
+    float currentUtilization = 0.0;
+    long Jiffies();
+    long ActiveJiffies();
+    long IdleJiffies();
 };
 
 #endif
