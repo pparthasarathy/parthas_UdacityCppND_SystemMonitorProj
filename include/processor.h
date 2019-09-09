@@ -1,11 +1,11 @@
 #ifndef PROCESSOR_H
 #define PROCESSOR_H
 
-#define deltatime 1 // delta time in seconds over which to calculate current utilization
+#define deltatime 200 // delta time in milliseconds over which to calculate current utilization
 
 class Processor {
  public:
-    float Utilization();  // Done TODO: Returns the current CPU utilization over deltatime seconds
+    float Utilization();  // Done TODO: Returns the current CPU utilization over deltatime milliseconds
     float OverallUtilization(); // Done TODO: Returns the aggregate CPU utilization
   // Done TODO: Declare any necessary private members
  private:

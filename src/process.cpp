@@ -44,7 +44,8 @@ string Process::Ram() {
 // Done TODO: Return the user (name) that generated this process
 string Process::User() { 
     if(user.empty()) {
-        user = LinuxParser::User(pid);
+        uid = LinuxParser::Uid(pid);
+        user = LinuxParser::User(uid);
     }
     return user;    
 }
@@ -55,5 +56,5 @@ long int Process::UpTime() { return LinuxParser::UpTime(pid); }
 // Done TODO: Overload the "less than" comparison operator for Process objects
 // REMOVE: [[maybe_unused]] once you define the function
 bool Process::operator<(Process const& a) const { 
-    return (this->ramUtilization < a.ramUtilization); 
+    return ( a.cpuUtilization < this->cpuUtilization); 
 }

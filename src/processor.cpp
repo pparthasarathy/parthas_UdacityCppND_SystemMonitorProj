@@ -2,13 +2,13 @@
 #include "linux_parser.h"
 #include <unistd.h>
 
-// Done TODO: Returns the current CPU utilization over deltatime seconds
+// Done TODO: Returns the current CPU utilization over deltatime milliseconds
 float Processor::Utilization() { 
     float totald = 0;
     float idled = 0;
     long PrevTotal = Jiffies(); 
     long PrevIdle = IdleJiffies();
-    sleep(deltatime);
+    usleep(deltatime*1000); //usleep sleeps in micro seconds, so multiply by 1000 for milliseconds
     totalJiffies = Jiffies();
     idleJiffies = IdleJiffies();
     activeJiffies = ActiveJiffies();
